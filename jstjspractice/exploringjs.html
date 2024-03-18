@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Learning Javascript dekhte hai kitna din</h1>
+<script>
+    console.log("Bye, world!!")
+
+    //dynamic types and let allows mutability
+    let age = 18
+    console.log("Yes that's my age. Only " + age)
+    console.log(typeof(age))
+    age = "eighteen"
+    console.log("Yes that's my age. Only " + age)
+    console.log(typeof(age))
+
+    //diff between let and const. IMMUTABLE
+        const immutableAGe = 18 
+        // immutableAGe = 19 //Error assignment to const variable.
+
+
+    //Strings
+    const roomsize = '22'
+    const owner = 'Thonson\'s room'
+    const ownerDoubleQuotes = "Thonson's room"
+    console.log(roomsize)
+    console.log(owner)
+    console.log(ownerDoubleQuotes)
+
+const thisYear = "2024"
+console.log(+2024) //convert string to number
+console.log(+thisYear+1) //convert string to number
+
+//template string
+const displaymsg = `${owner} has ${roomsize} participants`
+console.log(displaymsg) 
+
+const nextnextyear = `${+thisYear}`
+console.log(nextnextyear)
+console.log(owner.charAt(0))
+console.log(owner.length)
+console.log(owner.toUpperCase())
+//Arrays
+const colors = ['red', 'green', 'blue']
+console.log(colors.length)
+console.log(colors)
+console.log(colors[1])
+console.log(colors.push('ishita/black'))
+console.log(colors)
+
+console.log(colors.pop())
+
+//lambda expressions do not change original array
+//map - returns a new array 
+const toUpperCaseColors = colors.map((x)=> x.toUpperCase())
+console.log(toUpperCaseColors) //new array returned not modified original 
+
+const colorsWithR = colors.filter((color) => color.includes('r'))
+console.log(colorsWithR)
+
+const colorsWithLengthGreaterThan4 = colors.filter((color) => color.length >=4)
+console.log(colorsWithLengthGreaterThan4)
+// console.log();
+
+//LOOPS
+console.log("Learning Loops");
+
+///for loop 
+for(let i=0; i<3; i++){
+    console.log(colors);
+    console.log("The color at index "+ `${i}` +" is "+ `${colors[i]}`);
+}
+
+//for loop via index
+for(let i=0; i<colors.length; i++)
+{
+    console.log("The color at index "+ `${i}` +" is "+ `${colors[i]}`);
+}
+
+//for-each
+for (const color of colors)
+{
+    console.log(color);
+}
+
+// CONDITIONAL 
+console.log("Conditional statements");
+
+for (const color of colors)
+{
+
+if(color==="red"){
+    console.log("It's red");
+}
+
+else if(color==="green")
+{
+    console.log("It's red");
+}
+else{
+    console.log("It's neither red or green");
+}
+
+switch(color){
+    case "red": console.log("It's red"); break;
+    case "green": console.log("It's green"); break;
+
+    default: console.log("It's neither");
+
+}
+
+//Teranary
+
+}
+
+//OBJECTS
+console.log("Learning Objects");
+
+const matt = {
+name: "matt",
+age: 26,
+foods: ["pizza", "pasta"],
+preferences: [{color: "blue"},{season:"summer"}]
+
+}
+
+console.log(matt.preferences[1].season);
+console.log(matt.foods.push("lunch wali biryani"))
+console.log(matt.location= "NKP 8th floor");
+console.log(matt);
+
+//Creating functions
+
+console.log("Creating Functions");
+function sayHello(fn, ln){
+    return ('Hello ' + fn + ' ' + ln);
+
+}
+
+const sayHelloArrowReturn = (fn, sn) =>{ return ('Hello ' + fn + ' ' + sn)};
+
+const sayHelloArrow = (fn, sn) => ('Hello ' + fn + ' ' + sn);
+
+console.log(sayHello("Abhi", "Gupta"));
+
+</script>
+</body>
+</html>
