@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import TransactionsTable from './components/Transactions/Transactions';
 import Greeting from './components/Greetings';
+import SongList from './components/SongList';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 <button>Search</button>
 <TransactionsTable />
 <Greeting name= "abhishek" age={23}></Greeting>
+<SongList></SongList>
 
 </>
 
