@@ -1,3 +1,5 @@
+import axios, { AxiosResponse } from "axios";
+
 export type PaymentType =
     {id: number,
     amount: number,
@@ -8,6 +10,7 @@ export type PaymentType =
         taxCode: number,
         taxRate: number,
         type: string}
+
 
 export const getAllPayments : () => PaymentType[] 
     = () => { return [
@@ -23,5 +26,20 @@ export const getAllPayments : () => PaymentType[]
         {id: 110, amount: 110, country: "FRA", currency: "EUR", date: "2017-02-01", orderId:"21216661", taxCode: 7, taxRate: 0.21, type: "SALE"},
         {id: 111, amount: -150, country: "SWE", currency: "EUR", date: "2017-02-01", orderId:"21216662", taxCode: 19, taxRate: 0.25, type: "Refund"},
         {id: 112, amount: 600, country: "USA", currency: "USD", date: "2017-02-02", orderId:"21216663", taxCode: 0, taxRate: 0, type: "SALE"}
-    ]
-}
+    ]}
+
+export const getAllPaymentsRestVersion =():Promise<Response>=>{
+        const responsePromise:  Promise<Response>= fetch("https://payments.multicode.uk/api/payment",{method:'GET', headers:{'Accept':'application/json'}});
+        return responsePromise;
+        // responsePromise.then(response => {
+        //  response.json().then(data => console.log(data));
+        // })
+        };
+
+
+
+export const getAllPaymentsAxiosVersion = () : Promise<AxiosResponse<PaymentType[]>> => {
+            const transactionsPromise = axios<PaymentType[]>({ url : "https://payments.multicode.uk/api/payment", method: "GET", headers : {'Accept': 'application/json'} });
+            return transactionsPromise;
+        }
+

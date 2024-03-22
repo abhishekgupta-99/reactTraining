@@ -1,9 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TransactionsTable from './components/Transactions/Transactions';
 import Greeting from './components/Greetings';
 import SongList from './components/SongList';
+import Search from './components/Search';
+import AddTransaction from './components/Transactions/AddTransaction';
 
 function App() {
   return (
@@ -14,10 +15,11 @@ function App() {
 <h3>Order Id</h3>
 <input></input>
 <button>Search</button>
-<TransactionsTable />
+{/* <TransactionsTable /> */}
 <Greeting name= "abhishek" age={23}></Greeting>
 <SongList></SongList>
-
+<Search></Search>
+<AddTransaction></AddTransaction>
 </>
 
 );

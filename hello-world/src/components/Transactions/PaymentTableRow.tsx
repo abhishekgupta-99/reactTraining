@@ -2,6 +2,8 @@ import { PaymentType } from "../../data/DataFunction"
 
 const PaymentTableRow = (props: PaymentType):JSX.Element =>{
 
+    
+
     return (
         <tr>
             <td>{props.id}</td>
@@ -16,3 +18,5 @@ const PaymentTableRow = (props: PaymentType):JSX.Element =>{
     )
 
 }
+
+export default PaymentTableRow;

@@ -44,6 +44,9 @@ const list = transactions.map(
     //reduce method
     transactionsARea.innerHTML = "<ul>" + list.join('') + "</ul>";
     transactions.reduce((total, transaction) => total+transaction.amount, 0).toString();
+
+    //rEACT => SIMPLIFIED AND REDUCED CODE OF JAVASCRIPT
+    //CAN BE ACHEIVED SAME BUT LARGE LINES OF CODE
     
 }
 }
